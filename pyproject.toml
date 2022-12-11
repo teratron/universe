@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "universe"
+version = "0.1.0"
+description = "Model of universe"
+authors = ["Oleg Alexandrov <alexandrovoleg.ru@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+homepage = "https://teratron.github.io/universe"
+repository = "https://github.com/teratron/universe"
+documentation = "https://teratron.github.io/universe/docs"
+keywords = ["universe", "space", "star", "planet"]
+packages = [{ include = "src/universe" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+requests = "^2.28.1"
+mypy = "^0.991"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "^5.3.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.0"
+
+[tool.poetry.scripts]
+my-script = "pynn:src/universe/universe.py"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
