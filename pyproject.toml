@@ -60,6 +60,11 @@ explicit_package_bases = true
 ignore_missing_imports = true
 show_error_codes = true
 
+[tool.black]
+target-version = ['py37']
+preview = true
+force-exclude = '''.*/setup\.py$'''
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
